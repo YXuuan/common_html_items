@@ -1,0 +1,186 @@
+html {
+	font-family: "Microsoft YaHei";
+	text-shadow: 1px 1px 0 #E4F1FF;
+}
+::selection{
+background:lightblue;
+}
+::-moz-selection{
+background:lightblue;
+}
+body {
+	margin: 10px;
+/*
+1、语法结构
+（1）margin-left:10px; 左外边距
+（2）margin-right:10px; 右外边距
+（3）margin-top:10px; 上外边距
+（4）margin-bottom:10px; 下外边距
+（5）margin:10px; 四边统一外边距
+（6）margin:10px 20px; 上下、左右外边距
+（7）margin:10px 20px 30px; 上、左右、下外边距
+（8）margin:10px 20px 30px 40px; 上、右、下、左外边距
+常用网页顶格设置：margin:0;
+2、可能取的值
+（1）length  规定具体单位记的外边距长度
+（2）%       基于父元素的宽度的外边距的长度
+（3）auto    浏览器计算外边距
+（4）inherit 规定应该从父元素继承外边距
+*/
+	background: url(bg.jpg) no-repeat;
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+	background-attachment:fixed;
+	/*背景图拉伸至全屏
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:cover;*/
+/*背景图x、y轴平铺
+	background-repeat:repeat;
+	background-position:center 0;
+*/
+}
+.main {
+	margin: 20px auto;
+	max-width: 500px;
+	background: #fff;
+	padding: 8px 20px 25px 20px;
+	border-radius: 8px;
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+.main h4 {
+	font-weight: 400;
+	font-size: 24px;
+	text-align: center;
+	color: #FF4081;
+	margin: 15px auto;
+}
+.main a {
+	display: inline-block;
+	margin-top: 25px;
+	text-decoration: none;
+	color: #FF4081;
+	font-size: 14px;
+}
+.img {
+	box-shadow: #9c9c9c 0 0 25px;
+	padding: 10px;
+}
+
+.input-text {
+	position: relative;
+	font-size: 15px;
+	color: #666;
+}
+.input-text + .input-text {
+	margin-top: 30px;
+}
+.input-text .input-text-label {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 5px;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+.input-text .input-text-control {
+	width: 100%;
+	position: relative;
+	z-index: 3;
+	height: 35px;
+	background: none;
+	border: none;
+	padding: 5px 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	border-bottom: 1px solid #777;
+	font-size: 15px;
+}
+.input-text .input-text-control:invalid {
+	outline: none;
+}
+.input-text .input-text-control:focus, .input-text .input-text-control:valid {
+	outline: none;
+	color: #FF4081;
+	box-shadow: 0 1px #FF4081;
+	border-color: #FF4081;
+}
+.input-text .input-text-control:focus + .input-text-label, .input-text .input-text-control:valid + .input-text-label {
+	font-size: 12px;
+	-ms-transform: translateY(-15px);
+	-webkit-transform: translateY(-15px);
+	transform: translateY(-15px);
+}
+
+.input-checkbox {
+	display: none;
+	cursor: pointer;
+}
+
+.input-checkbox:focus,
+.input-checkbox:active {
+	outline: none;
+}
+
+.input-checkbox + label {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	padding-left: 25px;
+	margin-right: 10px;
+	margin-top: 15px;
+}
+
+.input-checkbox + label:before,
+.input-checkbox + label:after {
+	content: '';
+	font-family: helvetica;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	position: absolute;
+	box-shadow: inset 0 0 2.5px rgba(102, 175, 233, 0.6);
+}
+
+.input-checkbox + label:before {
+	background-color: #fafafa;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.input-checkbox + label:after {
+	color: #fff;
+}
+
+.input-checkbox:checked + label:before {
+	-moz-box-shadow: inset 0 0 0 10px #158EC6;
+	-webkit-box-shadow: inset 0 0 0 10px #158EC6;
+	box-shadow: inset 0 0 0 10px #158EC6;
+}
+
+.input-checkbox + label:before {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.input-checkbox + label:hover:after, .input-checkbox:checked + label:after {
+	content: "\2713";
+	line-height: 18px;
+	font-size: 14px;
+}
+
+.input-checkbox + label:hover:after {
+	color: #c7c7c7;
+}
+
+.input-checkbox:checked + label:after, .input-checkbox:checked + label:hover:after {
+	color: #fff;
+}

@@ -1,19 +1,18 @@
 # Common_HTML_Itemsss
 一个可以被方便调用的HTML元素库。  
-目前包含如下控件：
-```
-input-text
-input-checkbox
-input-radio
-input-button
-input-submit
-```
-目前包含如下JavaScript功能：
-```
-location跳转
-复选框全选（反选）checkbox_switch(): 当参数group存在时仅对存在指定group标签的DOM进行操作
-延时执行
-```
+
+目前包含如下控件：  
+* input-text
+* input-checkbox
+* input-radio
+* input-button
+* input-submit
+
+目前包含如下JavaScript功能：  
+
+* location跳转
+* 复选框全选（反选）checkbox_switch(): 当参数group存在时仅对存在指定group标签的DOM进行操作
+* 延时执行
 
 ## 预览/Demo
 * Demo：https://yxuuan.github.io/common_html_items/index.html
